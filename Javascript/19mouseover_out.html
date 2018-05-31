@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		#res{
+		
+		width:300px;height:100px;border:2px solid green; padding:10px;color:white;
+		
+		}
+	</style>
+   <script>
+    
+       function disp(val){
+		if(val =='over'){
+			document.getElementById("res").style.background = "red";
+			document.getElementById("res").style.height = "auto";
+			document.getElementById("res").innerHTML = "Utttarpradesh is a state bordering India’s southeastern coast. Major culturapatnam has popular beaches like Ramakrishna and Rishikonda lining the Bay of Bengal, offering spots for swimming and surfing.l landmarks include Tirumala Venkateswara Temple, an ornate hilltop shrine to Hindu’s Vishnu, in the southern part of the state. It’s visited by tens of millions of pilgrims annually. The major northern port of Visakh";
+			
+		}
+		else{
+		document.getElementById("res").style.background = "green";
+		document.getElementById("res").innerHTML ="Utttarpradesh is a state bordering India’s southeastern coast. Major culturapatnam has popular beaches like Ramakrishna <br> <strong>Read more...</strong>";
+		}
+		
+	   }
+    </script>
+   </head>
+<body>
+   <table>
+       <tr>
+           <td>
+		  
+		   </td>
+       </tr>
+	   <tr>
+          
+       </tr>
+   </table>
+   
+	<div id="res" onmouseover="disp('over')" onmouseout="disp('out')"></div>
+  
+    
+</body>
+</html>

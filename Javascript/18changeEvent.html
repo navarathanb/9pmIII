@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		#res{
+		
+		width:300px;height:200px;border:2px solid green; padding:10px;
+		
+		}
+	</style>
+   <script>
+    
+       function disp(val){
+		if(val=='AP State'){
+			document.getElementById("res").innerHTML = "Andhra Pradesh is a state bordering India’s southeastern coast. Major cultural landmarks include Tirumala Venkateswara Temple, an ornate hilltop shrine to Hindu’s Vishnu, in the southern part of the state. It’s visited by tens of millions of pilgrims annually. The major northern port of Visakhapatnam has popular beaches like Ramakrishna and Rishikonda lining the Bay of Bengal, offering spots for swimming and surfing."
+		}
+		else if(val=='UP State'){
+			document.getElementById("res").innerHTML = "Utttarpradesh is a state bordering India’s southeastern coast. Major culturapatnam has popular beaches like Ramakrishna and Rishikonda lining the Bay of Bengal, offering spots for swimming and surfing.l landmarks include Tirumala Venkateswara Temple, an ornate hilltop shrine to Hindu’s Vishnu, in the southern part of the state. It’s visited by tens of millions of pilgrims annually. The major northern port of Visakha"
+		}
+		
+		else if(val=='TS State'){
+			document.getElementById("res").innerHTML = "Telangana State is a state bordering India’s southeastern coast. Major culjor northern port of Visakha..turapatnam has popular beaches like Ramakrishna and Rishikonda lining the Bay of Bengal, offering spots for swimming and surfing.l landmarks include Tirumala Venkateswara Temple, an ornate hilltop shrine to Hindu’s Vishnu, in the southern part of the state. It’s visited by tens of millions of pilgrims annually. The ma"
+		}
+		else{
+		document.getElementById("res").innerHTML = 'Please select any state';
+		}
+		
+		
+	   }
+    </script>
+   </head>
+<body>
+   <table>
+       <tr>
+           <td>
+		   <select onchange="disp(this.value)" id="state">
+			<option>Select State</option>
+			<option>AP State</option>
+			<option>UP State</option>
+			<option>TS State</option>
+		   </select>
+		   </td>
+       </tr>
+	   <tr>
+          
+       </tr>
+   </table>
+   
+	<div id="res" onclick="disp('hide')"></div>
+  
+    
+</body>
+</html>

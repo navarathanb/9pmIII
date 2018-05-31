@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Largest Number</title>
+
+   <script>
+    
+       function disp(){
+       
+       var A=document.getElementById("a").value;//
+       var B=document.getElementById("b").value;
+       var C=document.getElementById("c").value;
+       
+       if(A>B && A>C)
+           {
+              document.getElementById("op").value = "A is the Largest Number";
+              document.getElementById("res").innerHTML = "A is the Largest Number";
+              
+           }
+       
+       
+       else if(B>A && B>C)
+           {
+             document.getElementById("op").value = "B is the Largest Number";
+             document.getElementById("res").innerHTML = "B is the Largest Number";
+               
+           }
+       else
+           {
+              document.getElementById("op").value = "C is the Largest Number";
+              document.getElementById("res").innerHTML = "C is the Largest Number";
+               
+           }
+       }
+       
+    </script>
+   
+   
+   
+   
+</head>
+
+   
+   
+   
+<body>
+    
+<h1>Largest Value</h1>
+
+  
+   <table>
+       <tr>
+           <td>A:</td>
+           <td><input type="text" name="" id="a"></td>
+       </tr>
+       <tr>
+           <td>B:</td>
+           <td><input type="text" name="" id="b"></td>
+       </tr>
+       <tr>
+           <td>C:</td>
+           <td><input type="text" name="" id="c"></td>
+       </tr>
+       <tr>
+           <td><input type="submit" value="submit" onclick="disp()"></td>
+           
+          
+       </tr>
+   </table>
+   <input type="text" value="" id="op">
+	<div id="res">  </div>
+  
+    
+</body>
+</html>

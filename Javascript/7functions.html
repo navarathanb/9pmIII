@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+			function disp(){ // implementation of disp funcion
+				var val1 = prompt("enter value 1");// "2"
+				var val2 = prompt("enter value 2");
+				var val3 = prompt("enter + or - or / or *");
+				if(val3 == '+'){
+					var val = parseInt(val1)+parseInt(val2);
+					alert("Sum of two values : "+val);
+				}
+				else if(val3 == '-'){
+					var val = val1 - val2;
+					alert("substraction of two values : "+val);
+				}
+				else if(val3 == '/'){
+					var val = val1/val2;
+					alert("devision of two values : "+val);
+				}
+				else{
+					var val = val1*val2;
+					alert("multiplication of two values : "+val);
+				}
+			
+			}
+			disp();// calling the disp function
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
