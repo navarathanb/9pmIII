@@ -1,0 +1,159 @@
+*{
+ margin:0px;padding:0px; 
+}
+.main{
+    width:1000px;height:auto;background: gray;margin:0px auto;border:2px solid gray;
+}
+.main .head{
+    width:1000px;height:100px;background: #ffffff;
+}
+.head .logo{
+    width:100px;height:100px;float: left;
+}
+.head .title{
+    float: left;margin-top:30px;color:#268ac9;
+}
+
+.main .menu{
+    width:1000px;height:40px;background: #1b55d3;
+}
+.main .slider{
+    width: 1000px;height: 400px;background: url(../img/s1.jpg);
+}
+.main .servicesSlider{
+    background: url(../img/s2.jpg);
+}
+.main .content{
+    width:1000px;height:790px;background:lightgray;
+}
+.main .footer{
+    width:1000px;height:100px;background: rgb(20, 20, 20); color:white;text-align: center; line-height: 100px;
+}
+
+/* menu creation */
+
+.menu .nav{
+list-style: none;
+}
+.menu .nav li{
+    float: left;background:#48a74a;height:40px;width: 194px;line-height: 40px;margin-left: 5px;
+    text-align: center;
+}
+.menu .nav li a{
+    color:white;text-decoration: none;
+}
+.menu .nav li:hover{
+    background: #ee9b1e;font-size:18px;
+}
+.menu .nav .subnav{
+    list-style: none;
+    visibility: hidden;
+}
+.menu .nav li:hover .subnav{
+    visibility: visible;
+}
+.menu .nav .subnav li{
+    margin-left: 0px;
+    border-bottom:1px solid white;
+}
+.menu .nav .subnav .subsubnav{
+    visibility: hidden;
+    list-style: none; margin-left:194px;margin-top:-40px;
+}
+.menu .nav .subnav li:hover .subsubnav{
+    visibility: visible;
+}
+.subsubnav li{
+    border-left: 1px solid white;
+}
+
+/* main page services */
+.content .services{
+    width: 455px;height: 350px;background: white;float:left;margin-left:30px;margin-top:30px;border-radius:10px;
+}
+.services .image{
+    width: 300px; margin:5px 77.5px; height:200px;
+}
+.services .title{
+    text-align: center;font-size:22px;
+}
+.services .desc{
+    margin:10px 10px 5px 10px;font-size:15px;overflow: hidden;height:68px;
+}
+.services .read{
+    text-decoration: none;margin-left:10px;color : green;
+}
+
+/* services.html products design */
+
+.main .products{
+    height: 1240px;
+}
+.content .product{
+    width:320px; height:400px;background: white; float: left;margin-left:10px;margin-top:10px;
+}
+
+.product .image{
+    width:280px;height:260px;margin:5px 20px;
+}
+.product .title{
+    text-align: center;font-size:22px; color: #1536ca;
+}
+.product .box{
+    height: 50px;
+}
+.product .box .cost{
+    float: left;font-size:20px;line-height:50px;color:#2d302d; margin-left:20px;
+    font-weight: bold;
+}
+.product .box .review{
+    float: right;line-height: 50px; margin-right:20px;color:rgb(33, 163, 16);
+    font-size:20px;
+}
+.product .cart{
+    display: block;background: crimson; width:180px;color:white; text-decoration: none; 
+    height:35px;line-height: 35px; text-align: center;margin:0px auto;
+}
+
+/* contactus page */
+.main .contact{
+    height: 500px;
+   // background: url(../img/s1.jpg);
+}
+.contact .form{
+    width: 700px;
+    height: 500px;
+    float: left;
+    background: rgba(249, 250, 250, 0.5);
+}
+.contact .address{
+    width: 300px;
+    height: 500px;
+    float: left;
+    background: rgba(12, 85, 180, 0.5);
+}
+.contact .title{
+    color: rgb(12, 85, 180);
+    margin:10px;
+}
+.form .table{
+    margin-left:100px;margin-top:50px;
+}
+.table .inp{
+    width: 300px; height:40px;margin-bottom: 5px; font-size: 18px; color:gray;margin-left: 30px;
+}
+.table .area{
+    height: 100px;
+}
+.table .btn{
+    background: rgb(12, 85, 180);
+    border:0px; color: white;
+}
+
+.address address{
+    margin-left: 20px; line-height: 30px;font-size: 18px; color:white;
+}
+
+
+
+

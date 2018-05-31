@@ -1,0 +1,133 @@
+Css : casacading style sheets.
+to adding efffects(colors, background, alignments, spaces(inside,external), border, curves, animation) to the html pages 
+
+3 types of css:
+	1 inline css:
+		writing css properties inside the open html tag with the help of style property.
+	2 internal css:
+	3 external css:
+	
+	1 inline css: 
+		ex: <div style="width:300px;height:200px;background:red;"></div>
+		1inlinecss.html
+		
+	2 internal css:
+		write css properties inside <style> tag .
+		11internalcss.html
+		
+	selectors are using to identify the tag uniquely.
+		id and class, psuedo classes, psuedo elements.
+		# is for id, . is for class,
+		we can create only one id for each tag, we can create more than one class for each tag.
+		if two classes having same property, then last executed property is to be applied.
+		if id and class having same property , then id is high priority.
+		id , class  and inline css, then inline css has high priority.
+		!important is high priority than any thing.
+	//12selectors.html	
+
+	3external css:
+		seperate page preparing for css using extension.css.
+		
+	//13externalcss.html
+	
+		
+	css properties:
+		size: 
+			width:200px or 40%;
+			height:200px or 40%;
+		background:red  or blue or #26FF5C or rgb(255,92,38);//0-255	
+		
+		border:2px solid red;
+		//2border.html
+		
+		background:red url(3.jpg);
+		background-repeat:no-repeat | repeat-x | repeat-y | repeat-xy;
+		background-size:300px 200px;//width height
+		background-position:top left | top center | top right | bottom left | bottom right | center left | cener right | center center;
+		//3background.html
+		
+		margin:spaces out side(external ) the tag.
+		margin:20px;
+		margin-left | margin-right | margin-bottom | margin-top
+		margin:10px 40px;//top& bottom 10px , left & right 40px
+		margin:0px auto;
+		//4margin.html
+		
+		padding:spaces inside the tag.
+		padding:10px;
+		padding-left | padding-right | padding-bottom | padding-top
+		padding:10px 40px;//top& bottom 10px , left & right 40px
+		//5padding.html
+		
+		float:left, right , none;
+		align the tags from left to right or right to left.
+		//6float.html
+		we can add size(width, height) to the inline tag using float property.
+		
+		text:
+			color:red or #323232 or rgb(3,4,5);
+			text-align:center or left or right or justify;
+			text-transform: lowercase or uppercase or capitalize.
+			line-height:30px;
+			text-decoration:none or underline or overline or line-through;
+			letter-spacing:2px ;
+			word-spacing:2px;
+			vertical-align:sup or sub or 10px or -10px;
+		//7text.html	
+		
+		font:
+			font-size:20px;
+			font-family:timesnewroman, sans, sans-serif, verdana;
+			font-weight:bold or 100 to 900;
+			font-style:italic;
+			font-variant:small-caps;
+			
+		//8font.html
+
+		overflow:hidden or auto;
+		//9overflow.html
+		
+		clear:both or left or right or none;
+		to remove float property.
+		//10clear.html
+		
+		border-radius:30px;
+		border-radius = width = height = same number then we can get circlar shape border.
+		//13border-radius.html
+		
+		visibility:hidden or visible;
+			hidden : hide the tag, it will consume the spaces.
+			
+		display:none | block | inline | inline-block;
+			nond: hide the tag, it will not consume the spaces.
+		//15...html	
+		
+		ul:
+		list-style:none;//to remove the bullets.
+		
+		cursors:
+			n-resize
+			nw-resize
+			w-resize
+			pointer
+			help
+			move
+			crosshair
+			not-allowed
+			wait
+		//16cursor.html
+
+		box-sizing : border-box or content-box.
+		//17box-size.html
+		
+		position: fixed | relative | absolute;
+		fixed: fixed at current position.
+		relative:relative to its current position
+		absolute: relative to its root position.
+		
+		left:200px; right, top, bottom
+		z-index:- or + range (foreground /background)
+		
+		//18... html
+		
+		
