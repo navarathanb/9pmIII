@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <title></title>
+        <style>
+            #box{
+                height: 150px;
+                width:300px;
+              
+                border: 2px solid blue;
+               
+            }
+			#count{
+			height:35px;margin-top:10px;
+			}
+        </style>
+        <script>
+                function disp(val){
+					if(val.length>=30){
+					document.getElementById("count").innerHTML  = "Overflow";
+
+					}else{
+					 document.getElementById("count").innerHTML = val.length;
+					}
+                  
+                }
+          </script>         
+    </head>
+    <body>
+        <!-- onkeyup , onkeydown, onkeypress
+		assignment : 
+		char length upto 10 - green, width : 150px.
+		char length from 10 to 20 - orange, width : 250px.
+		char length from 20 to 30 - red , width : 400px.
+		
+		-->
+        <textarea  id="box" onkeyup="disp(this.value)"></textarea>
+		<div>
+			<div id="count"></div>
+		</div>
+    </body>
+</html>

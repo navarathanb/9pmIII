@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <title></title>
+        <style>
+           
+        </style>
+        <script>
+			function prnt(){
+			document.getElementById("head").style.display='none';
+			document.getElementById("btn").style.display='none';
+			window.print();
+			}
+		
+          function disp(){
+			var name = document.getElementById("name").value;
+			var date = document.getElementById("doj").value;
+			var des = document.getElementById("des").value;
+		
+			var data1 = "Mr/Ms. XXX, <br>" ;
+			var data2 = "We are from Srashtaa Software and we are pleased to offer you the position of YYY<br>";
+			var data3 = "And your joining date would be ZZZ.";
+			
+			document.getElementById("data").innerHTML = data1.replace("XXX",name)+data2.replace("YYY",des)+data3.replace("ZZZ",date)+"<br><input type='submit' value='print'  id='btn' onclick='prnt()'>";
+			
+			
+		  }
+		 
+          </script>         
+    </head>
+    <body>
+		<div id="head">
+		Name : <input type="text" id="name" ><br><br>
+		Doj : <input type="text" id="doj" ><br><br>
+		Designation : <input type="text" id="des" ><br><br>
+        <input type="submit" value="submit"onclick="disp()">
+		</div>
+		<div id="data"></div>
+    </body>
+</html>

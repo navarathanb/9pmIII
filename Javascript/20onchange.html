@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <title></title>
+        <style>
+            .box{
+                height: 150px;
+                width:300px;
+                margin: 20px;
+                border: solid 2px;
+                float: left;
+            }
+        </style>
+        <script>
+                function disp(val){
+                    if(val=="Gujarat"){
+                        document.getElementById("a").innerHTML= "Gujarat, India's westernmost state, has varied terrain and numerous sacred sites. In its urban center of Ahmedabad is the Calico Museum of Textiles, displaying antique and modern Indian fabrics. Spiritual leader Mahatma Gandhi's base from 1917–1930 was Sabarmati Ashram, where his living quarters remain on view. ";
+						document.getElementById("b").innerHTML = '';
+						document.getElementById("c").innerHTML = '';
+                    }
+                    else if (val=="Maharashtra"){
+                        document.getElementById("b").innerHTML="Maharashtra, a state spanning west-central India, is best known for its fast-paced capital, Mumbai (formerly Bombay). This sprawling metropolis is the seat of the Bollywood film industry. It also has sites like the British Raj-era Gateway of India monument and cave temples at Elephanta Island. To the south is the rustic, beach-lined Konkan Coast.";
+						document.getElementById("a").innerHTML = '';
+						document.getElementById("c").innerHTML = '';
+                    }
+                    else if (val=="Karnataka"){
+                        document.getElementById("c").innerHTML="Karnataka is a state in southwest India with Arabian Sea coastlines. The capital, Bengaluru (formerly Bangalore), is a high-tech hub known for its shopping and nightlife. To the southwest, Mysore is home to lavish temples including Mysore Palace, former seat of the region’s maharajas. ";
+						document.getElementById("b").innerHTML = '';
+						document.getElementById("a").innerHTML = '';
+                    }
+                    else{
+                        document.write("please select the state");
+                    }
+  
+                }
+          </script>         
+    </head>
+    <body>
+        <div>
+            <select onchange="disp(this.value)" id="state">
+                <option value="select state">Select State</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Karnataka">Karnataka</option>
+            </select> 
+        </div>
+        <div  id="a" class="box">
+
+        </div>
+        <div id="b" class="box">
+
+        </div>
+        <div id="c" class="box">
+
+        </div>
+        
+    </body>
+</html>

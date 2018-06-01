@@ -1,0 +1,23 @@
+
+<html>
+    <head>
+        <title></title>
+        <style>
+           
+        </style>
+        <script>
+          function disp(){
+			var email = document.getElementById("email").value;
+			var arr = email.split("@");//array
+			alert("User ID: "+arr[0].toLowerCase());
+		  }
+		  function upper(val){
+			document.getElementById("email").value = val.toUpperCase();
+		  }
+          </script>         
+    </head>
+    <body>
+		Email : <input type="text" id="email" onkeyup="upper(this.value)">
+        <input type="submit" value="submit"onclick="disp()">
+    </body>
+</html>
