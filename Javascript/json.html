@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            // function DateUI(){
+            //     this.getHourse = function(){
+            //         return "Display Hourse";
+            //     }
+            //     this.getMinutes =  function(){
+            //         return "Dislay Minutes";
+            //     }
+            //     this.date = "This is date";
+            // }
+
+            // var date = new DateUI();
+            // document.write(date.getHourse()+date.date+date.getMinutes());
+
+            var date = {
+                getHourse:function(val){
+                    return "Display Hourse"+val;
+                },
+                getMinutes:function(){
+                    return "Dislay Minutes";
+                },
+                date:"This is date"
+                
+            }
+           document.write(date.getHourse('test')+date.date+date.getMinutes());
+            
+            var student = {"name":"james","email":"james@gmail.com","disp":function(){ return "My name is "+student.name}};
+            document.write("<br>"+student.disp());
+            
+            {pname:pvalue,pname:pvalue,pname:pvalue,pname:pvalue}
+        </script>
+    </head>
+</html>

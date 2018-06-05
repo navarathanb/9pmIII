@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+        var date = new Date();
+        document.write(date+"<br>");
+        document.write("Date : "+date.getDate()+"<br>");
+        var month = date.getMonth()+1;
+        document.write("Month : "+month+"<br>");//0-11
+        document.write("Year : "+date.getFullYear()+"<br>");
+        document.write("Minutes : "+date.getMinutes()+"<br>");//0-59
+        document.write("Seconds : "+date.getSeconds()+"<br>");//0-59
+        document.write("Hours : "+date.getHours()+"<br>");//0-23
+        
+        var hours = date.getHours()-12;
+        document.write("12 Hours time : "+ hours + "<br>" ); 
+        document.write("Time : "+date.getTime()+"<br>");//1957
+
+
+
+
+    </script>
+</body>
+</html>

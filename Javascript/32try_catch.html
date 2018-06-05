@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       #date{
+           font-size:100px;text-align: center; background: red; color:white;
+       }
+   </style>
+</head>
+<body>
+    <div id="date"></div>
+    <script>
+        
+        function disp(){
+            try{
+                var date = new Date();
+                var month = date.getMonth()+1;
+                document.getElementbyId("date").innerHTML = date.getDate()+" - "+month+" - "+date.getFullYear()+" "+date.getHours()+" : "+date.getMinutes()+" : "+date.getSeconds();
+            }
+            catch(e){
+                alert(e.message)
+            }
+            
+        }    
+        setInterval("disp()",1000);
+    </script>
+</body>
+</html>
