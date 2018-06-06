@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    
+    <div id="res"></div>
+    <input type="submit" value="insert" onclick="insert()">
+    <script>
+            var data,students;
+                
+                if(window.XMLHttpRequest)//except IE 5 and 6
+                {
+                    data = new XMLHttpRequest();
+                }else{//ie 5 & 6
+                    data = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+    
+                data.onreadystatechange = function(){
+                    if(data.readyState == 4 && data.status == 200){
+                        students = JSON.parse(data.responseText);
+                        for(i=0;i<students.length;i++){
+                            document.getElementById("res").innerHTML += "<h2>Name : "+students[i].name+", Email : "+students[i].email+", MObile"+students[i].mobile+", Id : "+students[i].id+"</h2>"; 
+                        }
+
+                    }
+                }
+    
+                data.open("GET","json.txt",true);
+                data.send();
+                
+                function insert(){
+                    var name = "Rathan";
+                    var email = "rahan@gmail.com";
+                    var mobile=  32423423;
+                    var id = 105;
+                    var len = students.length;
+                    students.push({"name":name,"email":email,"mobile":mobile,"id":id});
+                    ;
+                    document.getElementById("res").innerHTML += "<h2> Name : "+students[len].name+", Email : "+students[len].email+", MObile"+students[len].mobile+", Id : "+students[len].id+"</h2>";
+                }
+            
+        </script>
+</body>
+</html>

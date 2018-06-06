@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+    <div id="res"></div>
+    <script>
+            // ajax :asynchronous javascript and xml
+            
+                var data;
+                
+                if(window.XMLHttpRequest)//except IE 5 and 6
+                {
+                    data = new XMLHttpRequest();
+                }else{//ie 5 & 6
+                    data = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+    
+                data.onreadystatechange = function(){
+                    if(data.readyState == 4 && data.status == 200){
+                        document.getElementById("res").innerHTML = data.responseText;
+                    }
+                    /*
+                        readyState  = 0 => request initialsed
+                                    = 1 => server connection established
+                                    = 2 => request received
+                                    = 3 => process the request
+                                    = 4 => req finisehd and response come
+                        status = 200 => ok/success
+                               = 403 => forbidden
+                               = 404 => page not found            
+
+                    */
+                }
+    
+                data.open("GET","ext.html",true);
+                data.send();
+    
+            
+        </script>
+</body>
+</html>
