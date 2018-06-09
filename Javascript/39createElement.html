@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function disp(){
+        var tag = document.getElementById("tag").value;
+        var text = document.getElementById("txt").value;
+
+        var tagC = document.createElement(tag);//<h2> </h2>, o/p : h2
+        var txtC = document.createTextNode(text);
+        tagC.appendChild(txtC);//
+        document.body.appendChild(tagC);
+    }
+    </script>
+</head>
+<body>
+    Tag: <input type="text" id="tag">
+    <br>
+    <br>
+    text: <input type="text" id="txt">
+    <br>
+    <br>
+    <input type="submit" value="submit" onclick="disp()">
+
+</body>
+</html>
