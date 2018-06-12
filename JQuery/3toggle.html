@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #box{
+            width: 300px;height: 200px; background: red;display: none;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready( function(){
+           $("input").click(function(){
+               $("#box").toggle(2000);
+           });
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <input type="submit" value="submit" class="btn">
+   
+
+    
+</body>
+</html>

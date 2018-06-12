@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #box{
+            width: 300px;height: 200px; background: red;display: none;
+        }
+        .btn2{
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $(".btn1").click(function(){
+              $("#box").fadeIn(2000);
+              $(".btn2").fadeIn();
+              $(".btn1").fadeOut();
+          })
+
+          $(".btn2").click(function(){
+             $("#box").fadeOut(2000); 
+             $(".btn1").fadeIn();
+              $(".btn2").fadeOut();
+          })
+      }) 
+    </script>
+</head>
+<body>
+    
+    <input type="submit" value="fadeIn" class="btn1">
+    <input type="submit" value="fadeOut" class="btn2">
+    <div id="box"></div>
+   
+
+    
+</body>
+</html>

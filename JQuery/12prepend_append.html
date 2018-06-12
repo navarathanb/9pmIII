@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box1{
+            background: red;margin:3px;
+        }
+        .box2{
+            background: green;margin:3px;
+        }
+        #div{
+            height: auto;
+            border:2px solid gray;
+            padding:10px;
+            width: 600px;
+
+        }
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $("#btn1").click(function(){
+               $("#div").prepend("<div class='box1'>This is before content</div>");
+           })
+           
+           $("#btn2").click(function(){
+               $("#div").append("<div class='box2'>This is after content</div>");
+           })
+
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+    <input type="submit" value="before" id="btn1">
+    <input type="submit" value="after" id="btn2">
+
+   <div id="div">
+
+       This is div tag
+
+    </div>
+
+</body>
+</html>

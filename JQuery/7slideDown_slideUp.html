@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #box{
+            width: 300px;height: 200px; background: red;display: none;
+        }
+        .btn2{
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $(".btn1").click(function(){
+              $("#box").slideDown(2000);
+              $(".btn2").show();
+              $(".btn1").hide();
+          })
+
+          $(".btn2").click(function(){
+             $("#box").slideUp(2000); 
+             $(".btn1").show();
+              $(".btn2").hide();
+          })
+      }) 
+    </script>
+</head>
+<body>
+    
+    <input type="submit" value="slideDown" class="btn1">
+    <input type="submit" value="slideUp" class="btn2">
+    <div id="box"></div>
+   
+
+    
+</body>
+</html>

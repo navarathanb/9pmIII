@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box1{
+            background: red;margin:3px;
+        }
+        .box2{
+            background: green;margin:3px;
+        }
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $("#btn1").click(function(){
+               $("#div").before("<div class='box1'>This is before function</div>");
+           })
+           
+           $("#btn2").click(function(){
+               $("#div").after("<div class='box2'>This is after function</div>");
+           })
+
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+    <input type="submit" value="before" id="btn1">
+    <input type="submit" value="after" id="btn2">
+
+   <div id="div">This is div tag</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        ul{
+            list-style: none;
+
+        }
+        ul li{
+            border: 2px solid gray;
+            width: 300px;height: 40px;line-height: 40px;
+        }
+        
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+          
+          $("#btn1").click(function(){
+             $("ul li:last-child").prependTo("ul");
+          })
+
+          $("#btn2").click(function(){
+            $("ul li:first-child").appendTo("ul");
+          })
+
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+    <input type="submit" value="prependTo" id="btn1">
+    <input type="submit" value="appendTo" id="btn2">
+
+    <ul>
+
+        <li>item - 1</li>
+        <li>item - 2</li>
+        <li>item - 3</li>
+        <li>item - 4</li>
+
+    </ul>
+
+
+
+</body>
+</html>
