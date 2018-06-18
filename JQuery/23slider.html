@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{margin:0px;padding: 0px;}
+        .box{
+            width: 1000px; height: 400px; margin:0px auto; background: lightgreen; position: relative;
+            overflow: hidden;
+        }
+        .left, .right{
+            background: rgb(6, 47, 124); color:white; text-decoration: none; padding: 13px; font-size:20px;
+            font-weight: bold;
+            position: absolute; top:160px;
+            z-index: 10;
+        }
+        .right{
+            right:0px;
+        }
+        .box ul{
+            list-style: none; position: relative;
+        }
+        .box ul li{
+            float: left;
+            width: 1000px; height:400px;
+        }
+        .box ul li .img{
+            width: 1000px; height:400px;
+        }
+       
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+        var licount = $(".box ul li").length;//6
+        var liwidth = $(".box ul li").width();//1000
+        var ulwidth = licount * liwidth; //6000
+        var animationStop ;
+        $(".box ul").css({width:ulwidth,marginLeft:-liwidth});
+
+        $(".left").click(function(){
+            $(".box ul").animate({left: liwidth},1000,function(){
+                $(".box ul li:last-child").prependTo(".box ul");
+                $(".box ul").css("left","");
+            });
+
+           
+        })
+        function rightA(){
+            $(".box ul").animate({left: -liwidth},1000,function(){
+                $(".box ul li:first-child").appendTo(".box ul");
+                $(".box ul").css("left","");
+            });
+        }
+
+        $(".right").click(function(){
+           rightA();
+        });
+       //animationStop = setInterval(function(){ rightA(); },2000);
+        
+        $(".box").mouseover(function(){
+            animationStop = setInterval(function(){ rightA(); },2000);
+        })
+        
+        $(".box").mouseout(function(){
+            setTimeout(function(){ 
+                clearInterval(animationStop);
+            },5000);
+        })
+        
+        
+       })
+     
+
+   </script>
+
+</head>
+<body>
+    <div class="box">
+        <a href="#" class="left"><</a>
+        <a href="#" class="right">></a>
+        <ul>
+            <li><img src="img/s1.jpg" alt="" class="img"></li>
+            <li><img src="img/s2.jpg" alt="" class="img"></li>
+            <li><img src="img/s3.jpg" alt="" class="img"></li>
+            <li><img src="img/s4.jpg" alt="" class="img"></li>
+            <li><img src="img/s5.jpg" alt="" class="img"></li>
+            <li><img src="img/s6.jpg" alt="" class="img"></li>
+        </ul>
+    </div>
+</body>
+</html>

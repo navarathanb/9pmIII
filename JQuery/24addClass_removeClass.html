@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{margin:0px;padding: 0px;}
+        .box{
+            width: 300px; height: 200px; background: lightgreen; 
+        }
+        .box2{
+            width: 400px; height: 300px;
+        }
+       
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+        $(".box").mouseover(function(){
+            $(".box").addClass("box2");
+        })
+        $(".box").mouseout(function(){
+            $(".box").removeClass("box2");
+        })
+        
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+    <div class="box">
+     
+    </div>
+</body>
+</html>

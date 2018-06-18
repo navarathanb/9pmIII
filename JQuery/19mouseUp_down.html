@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width: 100px; height:100px; background: red;float: left;margin:5px;
+        }
+        .box2{
+            width:100px;height:100px; background: green;float: left;margin:5px;
+        }
+        *{margin:0px;}
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+          $(".box").mousedown(function(){
+              $(".box").after("<div class='box2'></div>");
+              $(".box").before("<div class='box2'></div>");
+              $(".box2").hide(1000).show(1000).animate({borderRadius:'100px'},1000);
+          })
+           
+          $(".box").mouseup(function(){
+              $(".box").after("<div class='box2'></div>");
+              $(".box").before("<div class='box2'></div>");
+              $(".box2").hide(1000).show(1000).animate({borderRadius:'0px'},1000);
+          })
+           
+           
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+   <div class="box"></div>
+   
+
+</body>
+</html>

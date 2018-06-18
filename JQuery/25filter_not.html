@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width: 380px; height: auto; padding:10px; border: 2px solid red;float: left;
+            }
+            .first, .second{
+                width: 330px; height: auto; border: 2px solid green; margin:10px; padding:10px;
+            }
+            .box2{
+                width: 320px; height: auto; border: 2px solid gray; padding: 10px;float: left;margin-left:20px;
+            }
+            .btn{
+                display: block;margin-bottom: 5px;
+            }
+        </style>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".btn").click(function(){
+                    $("p").not(".para").css({background:'orange',color:'white' });
+                    $("p").not(".para").prependTo(".box2");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <button class="btn">Click</button>
+        <div class="box">
+            <div class="first">
+                <p>this is para - 1</p>
+                <p>this is para - 2</p>
+                <p class="para">this is para - 3</p>
+                <p>this is para - 4</p>
+                <p>this is para - 5</p>
+            </div>
+            <div class="second">
+                <p>this is para - 6</p>
+                <p>this is para - 7</p>
+                <p>this is para - 8</p>
+                <p>this is para - 9</p>
+                <p>this is para - 10</p>
+            </div>
+        </div>
+        <div class="box2"></div>
+    </body>
+</html>

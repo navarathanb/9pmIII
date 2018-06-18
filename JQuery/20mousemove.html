@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width: 100px; height:100px; background: rgb(119, 148, 118,0.4);float: left;margin:5px;
+        }
+        .box2{
+            width:100px;height:100px; background: rgb(90, 108, 189,0.4);float: left;margin:5px;
+        }
+        *{margin:0px;}
+        .main{
+            width:1000px;height: 600px; background: rgba(177, 5, 5, 0.61);position: relative;
+            top:-600px;margin:0px auto;
+        }
+        .back{
+            width:1000px;height:600px;margin:0px auto;
+        }
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+          $(document).mousemove(function(){
+              $(".box").after("<div class='box2'></div>");
+              $(".box").before("<div class='box2'></div>");
+              $(".box2").hide(1000).show(1000).animate({borderRadius:'100px'},1000);
+              
+          })
+         
+           
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+    <div class="back">
+            <div class="box"></div>
+    </div>
+    <div class="main">
+
+    </div>
+  
+   
+
+</body>
+</html>

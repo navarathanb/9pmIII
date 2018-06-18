@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width: 300px; height:250px; background: red;
+        }
+        .box2{
+            width:100px;height:100px; background: green;position: absolute;
+            z-index: -1;
+        }
+        *{margin:0px;}
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $(".box").mouseover(function(){
+              //$(".box2").fadeIn(2000);
+               $(".box2").animate({right:'0px',bottom:'0px'},2000);
+              
+           })
+           
+           $(".box").mouseout(function(){
+             // $(".box2").fadeOut(2000);
+               $(".box2").animate({left:'0px',top:'0px'},2000);
+              
+           })
+           
+           
+
+       })
+     
+
+   </script>
+
+</head>
+<body>
+   <div class="box"></div>
+   <div class="box2"></div>
+
+</body>
+</html>

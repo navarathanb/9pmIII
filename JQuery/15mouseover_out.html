@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width: 300px; height:250px; background: red;
+        }
+        .box2{
+            width:100px;height:100px; background: green;position: absolute;
+            right:0px;bottom: 0px;
+        }
+        
+    </style>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $(".box").mouseover(function(){
+               $(".box").after("<div class='box2'></div>");
+           })
+       })
+     
+
+   </script>
+
+</head>
+<body>
+   <div class="box"></div>
+   
+
+</body>
+</html>
